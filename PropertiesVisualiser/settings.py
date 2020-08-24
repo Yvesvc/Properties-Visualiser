@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('PROPERTIESVISUALISER_DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://propertiesvisualiser.herokuapp.com/']
+ALLOWED_HOSTS = ['propertiesvisualiser.herokuapp.com/']
 
 
 # Application definition
