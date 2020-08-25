@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('PROPERTIESVISUALISER_DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['propertiesvisualiser.herokuapp.com']
+ALLOWED_HOSTS = ['propertiesvisualiser.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -130,4 +130,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'staticfiles')
+]
