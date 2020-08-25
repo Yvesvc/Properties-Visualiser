@@ -75,12 +75,12 @@ WSGI_APPLICATION = 'PropertiesVisualiser.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 # DATABASES = {
 #     'default': {
@@ -92,6 +92,18 @@ DATABASES = {
 #         'PORT': '5432',
 #     }
 # }
+
+DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.postgresql',
+         'NAME': 'propertiesvisualiserdb',
+         'USER': 'postgres',
+         'PASSWORD': os.environ['PROPERTIESVISUALISER_POSTGRES'],
+         'HOST': os.environ['PROPERTIESVISUALISER_AWSRDS_HOST'],
+         'PORT': '5432',
+     }
+}
+
 
 
 # Password validation
