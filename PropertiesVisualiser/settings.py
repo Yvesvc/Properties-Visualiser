@@ -99,7 +99,7 @@ DATABASES = {
          'ENGINE': 'django.db.backends.postgresql',
          'NAME': 'propertiesvisualiserdb',
          'USER': 'postgres',
-         'PASSWORD': os.environ['PROPERTIESVISUALISER_POSTGRES'],
+         'PASSWORD': os.environ['PROPERTIESVISUALISER_AWSRDS_PW'],
          'HOST': os.environ['PROPERTIESVISUALISER_AWSRDS_HOST'],
          'PORT': '5432',
      }
