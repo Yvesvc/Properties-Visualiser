@@ -3,7 +3,6 @@ from django.http import HttpResponse
 from .models import Propertydatatable
 from django.db.models.query import QuerySet
 import json
-from typing import TypedDict
 from django.conf import settings
 
 
