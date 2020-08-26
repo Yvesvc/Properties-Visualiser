@@ -36,7 +36,12 @@ function initMap(propertiesForSale)
     function SetContentPropertyForSale(propertyForSale) {
         var address = 'Adres: ' + propertyForSale['street'] + ' ' + propertyForSale['number'] + ' ' + propertyForSale['box'];
         var price =  'Prijs: ' + propertyForSale['price'];
-        return address  + '<br>' +price
+        var nethabitablesurface = 'Bewoonbare oppervlakte: ' + propertyForSale['nethabitablesurface'];
+        var buildingconstructionyear =  'Bouwjaar: ' + propertyForSale['buildingconstructionyear'];
+        var bedroomcount =  'Aantal slaapkamers: ' + propertyForSale['bedroomcount'];
+        var hasterrace =  'Terras: ' + propertyForSale['hasterrace'];
+        var hasgarden =  'Tuin: ' + propertyForSale['hasgarden'];
+        return address  + '<br>' + price+ '<br>' + nethabitablesurface+ '<br>' + buildingconstructionyear+ '<br>' + bedroomcount+ '<br>' + hasterrace+ '<br>' + hasgarden
     }
    }
 
