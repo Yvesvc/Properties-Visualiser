@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Propertydatatable
 from django.db.models.query import QuerySet
-import json
+import simplejson as json
 from django.conf import settings
 
 
@@ -16,7 +16,9 @@ def ShowPropertiesForSale(request):
         propertiesForSale: list = []
         propertiesForSaleRecords: QuerySet = Propertydatatable.objects.filter(offertype="FOR_SALE")
         for propertiesForSaleRecord in propertiesForSaleRecords:
-            propertyForSale: dict = {'longitude': propertiesForSaleRecord.longitude, 'latitude': propertiesForSaleRecord.latitude}
+            propertyForSale: dict = {'longitude': propertiesForSaleRecord.longitude, 'latitude': propertiesForSaleRecord.latitude, 'price': propertiesForSaleRecord.price,
+                                     'bedroomcount': propertiesForSaleRecord.bedroomcount, 'street': propertiesForSaleRecord.street, 'number': propertiesForSaleRecord.number, 'box': propertiesForSaleRecord.box,
+                                     'nethabitablesurface': propertiesForSaleRecord.nethabitablesurface, 'buildingconstructionyear': propertiesForSaleRecord.buildingconstructionyear, 'hasterrace': propertiesForSaleRecord.hasterrace, 'hasgarden': propertiesForSaleRecord.hasgarden}
             propertiesForSale.append(propertyForSale)
         # markers = {}
         # markers['var1'] = 'valuevar2'
