@@ -1,5 +1,5 @@
 #map {
-    height: 100%;
+    height: 80%;
 }
 
 html,
@@ -7,4 +7,70 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+}
+/*FOR SALE / RENT BUTTON*/
+#forsale-forrent {
+    margin: auto;
+    padding-top: 10px;
+    width: 50%;
+    text-align: center;
+}
+
+.forsale-forrent-button{
+display:inline-block;
+padding:0.7em 1.4em;
+margin:0 0.3em 0.3em 0;
+border-radius:0.15em;
+box-sizing: border-box;
+text-decoration:none;
+font-family:'Roboto',sans-serif;
+text-transform:uppercase;
+font-weight:400;
+color:#000000;
+background-color:#3369ff;
+box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+text-align:center;
+position:relative;
+}
+
+.forsale-forrent-button-grey {
+    color:#000000;
+    background-color:rgb(192,192,192);
+}
+
+.forsale-forrent-button-blue {
+    color:#000000;
+    background-color:#668fff;
+}
+
+@media all and (max-width:30em){
+.forsale-forrent-buttont{
+display:block;
+margin:0.4em auto;
+}
+}
+
+/*PRICE RANGE*/
+
+#price-range-section{
+margin: auto;
+padding-top: 5px;
+width: 50%;
+text-align: center;
+}
+
+.price-range-class{
+display: inline-block;
+font-family:'Roboto',sans-serif;
+}
+
+#price-range-text{
+width:160px;
+}
+#price-range{
+width:75px;
+}
+
+#slider-range{
+width:250px;
 }

@@ -2,16 +2,30 @@
 <html>
 <head>
     <title>Simple Map</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCldruTKn2UqA-Lg9-ejGzX-YQs4Jezz2w&libraries=&v=weekly"
             defer></script>
     <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
 
 </head>
 <body>
     <div id="map"></div>
+
+    <div id="forsale-forrent">
+        <button id="for-sale-button" class="forsale-forrent-button forsale-forrent-button-blue"> Te koop </button>
+        <button id="for-rent-button" class="forsale-forrent-button forsale-forrent-button-grey"> Te huur </button>
+    </div>
+    <div id="price-range-section">
+      <div class="price-range-class" id="price-range-text"><label for="price-range">Prijs range (duizend):</label></div>
+      <div class="price-range-class"><input type="text" id="price-range" readonly style="border:0; color:#f6931f; font-weight:bold;"></div>
+      <div class="price-range-class" id="slider-range"></div>
+    </div>
 
 
   
